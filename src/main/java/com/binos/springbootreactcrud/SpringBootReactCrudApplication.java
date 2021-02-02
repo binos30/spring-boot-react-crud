@@ -1,25 +1,25 @@
-package com.binos.springbootcrud;
+package com.binos.springbootreactcrud;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.binos.springbootcrud.service.ItemService;
+import com.binos.springbootreactcrud.service.EmployeeService;
 
 /**
  * @author Venus Lumanglas
  */
 @SpringBootApplication
-public class SpringBootCrudApplication {
+public class SpringBootReactCrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCrudApplication.class, args);
+		SpringApplication.run(SpringBootReactCrudApplication.class, args);
 	}
 
 	@Bean
-	public CommandLineRunner run(final ItemService itemService) {
-		return args -> itemService.createItems();
+	public CommandLineRunner run(final EmployeeService employeeService) {
+		return args -> employeeService.createEmployees();
 	}
 
 }
