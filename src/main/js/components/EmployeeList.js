@@ -67,17 +67,6 @@ class EmployeeList extends Component {
 			}).then(employeePromises => {
 				return when.all(employeePromises);
 			}).done(employees => {
-				/*let attributes = []
-
-				for (let key in this.schema.properties) {
-					// skip loop if the property is from prototype
-					if (!this.schema.properties.hasOwnProperty(key)) continue;
-
-					const propNameObj = this.schema.properties[key];
-
-					attributes.push({ name: key, type: propNameObj.type });
-				}*/
-
 				this.setState({
 					employees: employees,
 					links: this.links,
