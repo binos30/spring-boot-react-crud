@@ -31,6 +31,9 @@ public class Employee implements Serializable {
 	@JsonIgnore
 	private Long version;
 
+	private Employee() {
+	}
+
 	public Employee(String firstName, String lastName, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
